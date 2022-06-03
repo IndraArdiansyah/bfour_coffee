@@ -1,0 +1,139 @@
+/* Navbar */
+
+.nama {
+    font: bold;
+    font-size: 18px;
+    font-family: Raleway, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+}
+
+.logo i {
+    font-size: 20px;
+}
+
+.sosmed li {
+    position: relative;
+    list-style: none;
+}
+
+.carousel-inner {
+    padding-top: 2rem;
+    margin-left: 10px;
+    padding-bottom: 2rem;
+    border-radius: 120px;
+}
+
+#jumbotron {
+    background-color: #8ad6b0;
+}
+
+.form p {
+    font-family: sans-serif;
+    font-size: lem;
+    color: #fff;
+    margin-bottom: 3px;
+}
+
+.form {
+    width: 300px;
+    height: 350px;
+    margin: 60px auto 0;
+    background: rgba(0, 0, 0, 0);
+    text-align: center;
+    padding: 35px;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    background-image: url(img/foto2.jpg);
+}
+
+.form h3 {
+    margin-bottom: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn {
+    display: block;
+    height: 30px;
+    line-height: 15px;
+    text-align: center;
+    background: deepskyblue;
+    border-radius: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 5px;
+}
+
+.input {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px 0 10px 0;
+    border: 2px solid gray;
+    background: transparent;
+    color: #fff;
+}
+
+.box p {
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.pass {
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    font-family: monospace;
+}
+
+.pengum {
+    background-color: #f3f4f5;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#berita {
+    background-color: #8ad6b0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#aktivitas {
+    background-color: #f3f4f5;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#lokasi {
+    background-color: #8ad6b0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.figure {
+    width: 100%;
+    height: auto;
+    font-weight: 800px;
+    font-size: 30px;
+}
+
+#kontak {
+    background-color: #f3f4f5;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.isikontak {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #0f0404;
+    margin: 1px;
+    font: size 15px;
+}
