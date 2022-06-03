@@ -18,16 +18,6 @@ class Autentifikasi extends CI_Controller {
 		$this->load->view('templates/footer', $data);
     }
   
-  // public function pilihPoli () {
-  //   $data = ['judul' => 'Pilih Poli'];
-  //   $nama = $this->input->post('nama', true);
-  //   $user = $this->ModelUser->cekData(['nama' => $this->session->userdata('nama')])->row_array();
-  //   $data['user'] = $user['nama'];
-    
-  //   $this->load->view('templates/header', $data);
-	// 	$this->load->view('dashboard/pilih_poli', $data);
-	// 	$this->load->view('templates/footer', $data);
-  // }
 
   public function pilihPoli(){
     if ($this->session->userdata('nik')) {

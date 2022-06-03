@@ -132,12 +132,4 @@ class Admin extends CI_Controller {
     $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Anda telah logout!!</div>');
     redirect('autentifikasi');
   }
-  // public function home() {
-  //   $data = ['judul' => 'Dashboard'];
-  // //jika sudah login dan jika belum login
-	
-	// $this->load->view('admin/index', $data);
-	// $this->load->view('dashboard/index', $data);
-  // $this->load->view('templates/templates_user/modal', $data);
-	// $this->load->view('templates/footer', $data);
 }
