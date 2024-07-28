@@ -89,7 +89,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url','file','form');
+$autoload['helper'] = array('url','file','form','tanggal_indo');
 
 /*
 | -------------------------------------------------------------------
@@ -132,4 +132,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('ModelUser','ModelAntrian','ModelPoli', 'ModelAdmin');
+$autoload['model'] = array('ModelBooking','ModelMenu', 'ModelAdmin');

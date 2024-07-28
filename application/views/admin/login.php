@@ -3,13 +3,13 @@
   <form class="admin" method="post" action="<?= base_url('admin'); ?>">
     <div class="wrapper">
       <div class="gambar align-items-center">
-        <img src="<?php echo base_url('assets/img/upload/logo2.png'); ?>" alt="Image" class="img-fluid ">
+        <img src="<?php echo base_url('assets/img/avatar.jpg'); ?>" alt="Image" class="img-fluid ">
       </div>
-      <div class="text-center mt-4 name"> Login Admin</div>
+      <div class="text-center mt-4 name"> Login</div>
       <hr>
       <br>
       <div class="form-field d-flex align-items-center">
-        <input type="text" class="form-control" id="nip" name="nip" placeholder="Nomor Induk Pegawai"
+        <input type="text" class="form-control" id="nip" name="nip" placeholder="Username"
           value="<?= set_value('nip'); ?>">
         <?= form_error('nip', '<small class="text-danger pl-3">', '</small>'); ?>
       </div>

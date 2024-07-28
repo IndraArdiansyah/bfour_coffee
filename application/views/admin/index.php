@@ -1,33 +1,31 @@
-<main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+<main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg " style="margin-left: 270px;">
   <!-- Navbar -->
-  <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
-    navbar-scroll="true">
+  <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
     <div class="container-fluid py-1 px-3">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
           <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="#">Halaman</a></li>
         </ol>
-        <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+        <h6 class="font-weight-bolder mb-0"><?= $judul; ?></h6>
       </nav>
-      <div class="collapse navbar-collapse" id="navbar" style="margin-left: 45em;">
+      <div class="collapse navbar-collapse" id="navbar" style="margin-left: 35rem;">
         <ul class="navbar-nav">
           <li class="nav-item dropdown no-arrow">
-            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-              ariahaspopup="true" aria-expanded="false">
-              <span class="mr-2 d-none d-lg-inline text-gray-600 font-weight-bolder"><?= $user; ?> </span>
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" ariahaspopup="true" aria-expanded="false">Selamat Datang,
+              <span class=" d-none d-lg-inline text-black-600 font-weight-bolder"><?= $user; ?>
+              </span>
             </a>
             <!-- Dropdown - User Information -->
 
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-              <a class="dropdown-item" href="<?= base_url('user'); ?>">
+              <a class="dropdown-item" href="<?= base_url('admin/profile'); ?>">
                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                 Profile Saya
               </a>
 
               <div class="dropdown-divider"></div>
 
-              <a class="dropdown-item" href="<?= base_url('admin/logout'); ?>" data-dismiss="modal"
-                datatarget="#logoutModal">
+              <a class="dropdown-item" href="<?= base_url('admin/logout'); ?>" data-dismiss="modal" datatarget="#logoutModal">
                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                 Logout
               </a>
@@ -38,190 +36,316 @@
     </div>
   </nav>
   <!-- End Navbar -->
-  <div class="container-fluid py-4">
+  <div class="container-fluid py-3" style="background-color: #DCDCDC;">
     <div class="row">
       <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-        <div class="card">
-          <div class="card-header p-3 pt-2">
-            <div
-              class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-              <i class="fa-solid fa-users"></i>
+        <a href="<?= base_url('home/daftar_admin'); ?>" style="text-decoration: none; color: inherit;">
+          <div class="card">
+            <div class="card-header p-3 pt-2">
+              <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
+                <i class="material-icons opacity-10">supervisor_account</i>
+              </div>
+              <div class="text-end pt-1">
+                <p class="text-sm mb-0 text-capitalize">Anggota Member</p>
+                <h4 class="mb-0">
+                  <?= $jml_admin; ?>
+                </h4>
+              </div>
             </div>
-            <div class="text-end pt-1 pb-4">
-              <p class="text-sm mb-0 text-capitalize"></p>
-              <h5 class="mb-0">Poli Umum</h5>
+            <div class="card-footer p-3">
+              <p class="mb-0"><span class="text-success text-sm font-weight-bolder"></span>&nbsp;</p>
             </div>
           </div>
-          <hr class="dark horizontal my-0">
-          <div class="card-footer p-3">
-            <p class="mb-0"><span class="text-success font-weight-bolder" style="font-size: 20px;">
-                <?= $this->ModelAdmin->getWhere(['is_active' => 1])->num_rows(); ?>
-              </span></p>
-          </div>
-        </div>
+        </a>
       </div>
       <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-        <div class="card">
-          <div class="card-header p-3 pt-2">
-            <div
-              class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
-              <i class="fa-solid fa-tooth"></i>
+        <a href="<?= base_url('home/daftar_kategori'); ?>" style="text-decoration: none; color: inherit;">
+          <div class="card">
+            <div class="card-header p-3 pt-2">
+              <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                <i class="material-icons opacity-10">dns</i>
+              </div>
+              <div class="text-end pt-1">
+                <p class="text-sm mb-0 text-capitalize">Daftar kategori</p>
+                <h4 class="mb-0"><?= $kategori; ?></h4>
+              </div>
             </div>
-            <div class="text-end pt-1 pb-4">
-              <p class="text-sm mb-0 text-capitalize"></p>
-              <h5 class="mb-0">Poli Gigi</h5>
+            <hr class="dark horizontal my-0">
+            <div class="card-footer p-3">
+              <p class="mb-0"><span class="text-success text-sm font-weight-bolder"></span>&nbsp;</p>
             </div>
           </div>
-          <hr class="dark horizontal my-0">
-          <div class="card-footer p-3">
-            <p class="mb-0"><span class="text-success text-sm font-weight-bolder">- </span></p>
-          </div>
-        </div>
+        </a>
       </div>
       <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-        <div class="card">
-          <div class="card-header p-3 pt-2">
-            <div
-              class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
-              <i class="fa-solid fa-child-reaching"></i>
+        <a href="<?= base_url('home/daftar_menu'); ?>" style="text-decoration: none; color: inherit;">
+          <div class="card">
+            <div class="card-header p-3 pt-2">
+              <div class="icon icon-lg icon-shape bg-gradient-warning shadow-primary text-center border-radius-xl mt-n4 position-absolute">
+                <i class="material-icons opacity-10">kitchen</i>
+              </div>
+              <div class="text-end pt-1">
+                <p class="text-sm mb-0 text-capitalize">Daftar Menu</p>
+                <h4 class="mb-0"><?= $menu; ?></h4>
+              </div>
             </div>
-            <div class="text-end pt-1 pb-4">
-              <p class="text-sm mb-0 text-capitalize"></p>
-              <h5 class="mb-0">Poli Anak</h5>
+            <hr class="dark horizontal my-0">
+            <div class="card-footer p-3">
+              <p class="mb-0"><span class="text-success text-sm font-weight-bolder"></span>&nbsp;</p>
             </div>
           </div>
-          <hr class="dark horizontal my-0">
-          <div class="card-footer p-3">
-            <p class="mb-0"><span class="text-danger text-sm font-weight-bolder">-</span></p>
-          </div>
-        </div>
+        </a>
       </div>
-      <div class="col-xl-3 col-sm-6">
-        <div class="card">
-          <div class="card-header p-3 pt-2">
-            <div
-              class="icon icon-lg icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute">
-              <i class="fa-solid fa-person-pregnant"></i>
+      <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+        <a href="<?= base_url('home/pengunjung'); ?>" style="text-decoration: none; color: inherit;">
+          <div class="card">
+            <div class="card-header p-3 pt-2">
+              <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
+                <i class="material-icons opacity-10">person</i>
+              </div>
+              <div class="text-end pt-1">
+                <p class="text-sm mb-0 text-capitalize">Pengunjung</p>
+                <h4 class="mb-0">
+                  <?= $orders; ?>
+                </h4>
+              </div>
             </div>
-            <div class="text-end pt-1">
-              <p class="text-sm mb-0 text-capitalize"></p>
-              <h5 class="mb-0">Poli Kesehatan</h5>
-              <h5 class="mb-0">Ibu dan Anak</h5>
+            <hr class="dark horizontal my-0">
+            <div class="card-footer p-3">
+              <p class="mb-0"><span class="text-success text-sm font-weight-bolder"></span>&nbsp;</p>
             </div>
           </div>
-          <hr class="dark horizontal my-0">
-          <div class="card-footer p-3">
-            <p class="mb-0"><span class="text-success text-sm font-weight-bolder">- </span></p>
-          </div>
-        </div>
+        </a>
       </div>
     </div>
-    <br>
-    <div class="row mb-4">
-      <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
-        <div class="card">
-          <div class="card-header pb-0">
-            <div class="row">
-              <div class="col-lg-6 col-7">
-                <h6>Data Pasien</h6>
-                <p class="text-sm mb-0">
-                  <i class="fa fa-check text-info" aria-hidden="true"></i>
-                  <span class="font-weight-bold ms-1">Bulan Ini</span>
-                </p>
-              </div>
-              <div class="col-lg-6 col-5 my-auto text-end">
-                <div class="dropdown float-lg-end pe-4">
-                  <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-ellipsis-v text-secondary"></i>
-                  </a>
-                  <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
-                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
-                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
-                  </ul>
+    <div class="container-fluid py-3" style="background-color: #DCDCDC;">
+      <div class="row mb-4">
+        <div class="col-lg-12 col-md-6 mb-md-0 mb-4">
+          <div class="card">
+            <div class="card-header pb-0 bg-secondary">
+              <div class="row">
+                <div class="col-lg-12 ">
+                  <h4>Grafik Jumlah Pemesanan Customer All</h4>
                 </div>
               </div>
             </div>
           </div>
           <div class="card-body px-0 pb-2">
-            <div class="table-responsive">
-              <table class="table align-items-center mb-0">
-
-                <thead>
-                  <tr>
-                    <th class="text-uppercase text-secondary  text-xxs font-weight-bolder opacity-10">No</th>
-                    <th class="text-uppercase text-secondary  text-xxs font-weight-bolder opacity-10">Nama</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-10 ps-2">NIK</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-10">Umur
-                    </th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-10">
-                      Poli</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <?php
-                    $i = 1; 
-                    foreach ($pasien as $p) :
-                    ?>
-                    <td>
-                      <div class="d-flex px-2 py-1">
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-sm"><?= $i++; ?></h6>
-                        </div>
+            <div class="row">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <canvas id="barChartAll" width="400" height="200"></canvas>
                       </div>
-                    </td>
-                    <td>
-                      <div class="d-flex px-2 py-1">
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-sm"><?= $p['nama']; ?></h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="d-flex px-2 py-1">
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-sm"><?= $p['nik']; ?></h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="d-flex px-2 py-1">
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="mb-0 text-sm"><?= $p['umur']; ?></h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="align-middle">
-                      <div class="progress-wrapper w-75 mx-auto">
-                        <div class="progress-info">
-                          <div class="progress-percentage">
-                            <span class="text-xs font-weight-bold">60%</span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <?php endforeach; ?>
-                </tbody>
-              </table>
-              <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-end">
-                  <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="<?php $i=1; $i=10; $i++;?>">1</a></li>
-                  <li class="page-item"><a class="page-link" href="<?php $i=11; $i=20; $i++;?>">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                  </li>
-                </ul>
-              </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="container-fluid py-3" style="background-color: #DCDCDC;">
+      <div class="row mb-4">
+        <!-- Grafik Jumlah Pemesanan Customer Dine in -->
+        <div class="col-lg-6 col-md-6 mb-md-0 mb-4">
+          <div class="card">
+            <div class="card-header pb-0 bg-secondary">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h6>Grafik Jumlah Pemesanan Customer Dine in</h6>
+                </div>
+              </div>
+            </div>
+            <div class="card-body px-0 pb-2">
+              <div class="row">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <canvas id="barChart0" width="400" height="200"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grafik Jumlah Pemesanan Customer Online -->
+        <div class="col-lg-6 col-md-6 mb-md-0 mb-4">
+          <div class="card">
+            <div class="card-header pb-0 bg-secondary">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h6>Grafik Jumlah Pemesanan Customer Online</h6>
+                </div>
+              </div>
+            </div>
+            <div class="card-body px-0 pb-2">
+              <div class="row">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <canvas id="barChart2" width="400" height="200"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      function getStartOfWeek(date) {
+        var day = date.getDay();
+        var diff = date.getDate() - day + (day === 0 ? -6 : 1); // Adjust for week start on Monday
+        return new Date(date.setDate(diff));
+      }
+
+      function getDatesInRange(startDate, endDate) {
+        var dates = [];
+        var currentDate = new Date(startDate);
+        while (currentDate <= endDate) {
+          dates.push(new Date(currentDate));
+          currentDate.setDate(currentDate.getDate() + 1);
+        }
+        return dates;
+      }
+
+      function formatDate(date) {
+        return date.toISOString().split('T')[0]; // Format tanggal YYYY-MM-DD
+      }
+
+      function filterLast7DaysFromMonday(data) {
+        var today = new Date();
+        var startOfWeek = getStartOfWeek(new Date(today));
+        var endDate = new Date(startOfWeek);
+        endDate.setDate(startOfWeek.getDate() + 6); // 7 hari dari hari Senin
+
+        return getDatesInRange(startOfWeek, endDate).map(function(date) {
+          var formattedDate = formatDate(date);
+          var item = data.find(item => item.tgl_booking === formattedDate);
+          return {
+            tgl_booking: formattedDate,
+            total: item ? item.total : 0
+          };
+        });
+      }
+
+      // Data grafik pertama
+      var ordersDataAll = <?= $orders_count_by_date; ?>;
+      var filteredDataAll = filterLast7DaysFromMonday(ordersDataAll);
+
+      // Menyiapkan label dan data
+      var labelsAll = filteredDataAll.map(function(item) {
+        return item.tgl_booking;
+      });
+      var dataAll = filteredDataAll.map(function(item) {
+        return item.total;
+      });
+
+      var ctxAll = document.getElementById('barChartAll').getContext('2d');
+      new Chart(ctxAll, {
+        type: 'bar',
+        data: {
+          labels: labelsAll,
+          datasets: [{
+            label: 'Jumlah Pemesanan All',
+            data: dataAll,
+            backgroundColor: 'rgb(240, 128, 128, 0.2)',
+            borderColor: 'rgb(233, 150, 122, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+
+      // Ulangi untuk grafik lainnya (dine in, online)
+      var ordersData0 = <?= $orders_count_by_date0; ?>;
+      var filteredData0 = filterLast7DaysFromMonday(ordersData0);
+      var labels0 = filteredData0.map(function(item) {
+        return item.tgl_booking;
+      });
+      var data0 = filteredData0.map(function(item) {
+        return item.total;
+      });
+
+      var ctx0 = document.getElementById('barChart0').getContext('2d');
+      new Chart(ctx0, {
+        type: 'bar',
+        data: {
+          labels: labels0,
+          datasets: [{
+            label: 'Jumlah Pemesanan Dine in',
+            data: data0,
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+
+      var ordersData2 = <?= $orders_count_by_date2; ?>;
+      var filteredData2 = filterLast7DaysFromMonday(ordersData2);
+      var labels2 = filteredData2.map(function(item) {
+        return item.tgl_booking;
+      });
+      var data2 = filteredData2.map(function(item) {
+        return item.total;
+      });
+
+      var ctx2 = document.getElementById('barChart2').getContext('2d');
+      new Chart(ctx2, {
+        type: 'bar',
+        data: {
+          labels: labels2,
+          datasets: [{
+            label: 'Jumlah Pemesanan Online',
+            data: data2,
+            backgroundColor: 'rgba(255, 159, 64, 0.2)',
+            borderColor: 'rgba(255, 159, 64, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    </script>
+
+
+
+
 </main>
